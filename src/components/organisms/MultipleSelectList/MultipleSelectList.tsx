@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import type { Item, MultipleSelectListProps } from "./MultipleSelectList.types";
 
-import { Input, Button, Label } from "../../atoms";
+import "./MultipleSelectList.scss";
+
+import { Input, Button, Label, Header } from "../../atoms";
 import {
   CheckboxList,
   CheckboxListItemType,
@@ -47,14 +49,12 @@ export const MultipleSelectList: React.FC<MultipleSelectListProps> = (
 
   return (
     <div>
-      <Label>
-        {labels.title}
-        <Input
-          value={searchValue}
-          setValue={setSearchValue}
-          placeholder={labels.placeholder}
-        />
-      </Label>
+      <Header tag="h3">{labels.title}</Header>
+      <Input
+        value={searchValue}
+        setValue={setSearchValue}
+        placeholder={labels.placeholder}
+      />
       <CheckboxList list={filteredList} onClickItem={handleSelect} />
       <Button onClick={handleButtonOnClick}>{labels.button}</Button>
     </div>
