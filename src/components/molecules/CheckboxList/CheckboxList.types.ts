@@ -1,4 +1,4 @@
-type CheckboxListItemValueType = string;
+export type CheckboxListItemValueType = string;
 
 export type CheckboxListItemType = {
   value: CheckboxListItemValueType;
