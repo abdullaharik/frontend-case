@@ -7,6 +7,10 @@ export type SelectableItem = {
 
 export type MultipleSelectListProps = {
   list: Item[];
-  // selectedTaxonomyList: Taxonomy[];
-  // setSelectedTaxonomyList: (taxonomyList: Taxonomy[]) => void;
+  buttonOnClick: (selectedList: Item[]) => void;
+  labels: {
+    title: string;
+    placeholder: string;
+    button: string;
+  };
 };
