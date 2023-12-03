@@ -1,7 +1,7 @@
 import React from "react";
+import { Label, Li, Checkbox, Ul } from "../../atoms";
 
 import type { CheckboxListProps } from "./CheckboxList.types";
-import { Label, Li, Checkbox, Ul } from "../../atoms";
 
 import "./CheckboxList.scss";
 
