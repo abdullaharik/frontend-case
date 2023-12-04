@@ -1,0 +1,9 @@
+button {
+  background-color: var(--clr-primary);
+  border: none;
+  border-radius: var(--radius-2);
+  color: var(--clr-bg);
+  font-size: var(--font-size);
+  line-height: 1;
+  padding: calc(var(--font-size) * 1) calc(var(--font-size) * 1.5);
+}
