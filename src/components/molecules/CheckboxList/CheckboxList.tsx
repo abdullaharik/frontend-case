@@ -9,7 +9,7 @@ export const CheckboxList: React.FC<CheckboxListProps> = (props) => {
   const { list, onClickItem } = props;
 
   return (
-    <Ul>
+    <Ul className="checkbox-list">
       {/* SELECTED ITEMS */}
       {list
         .filter(({ checked }) => checked)
