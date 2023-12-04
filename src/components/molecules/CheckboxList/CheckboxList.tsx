@@ -19,7 +19,7 @@ export const CheckboxList: React.FC<CheckboxListProps> = (props) => {
               <Label>
                 <Checkbox
                   checked={checked}
-                  onClick={() => onClickItem(value)}
+                  onChange={() => onClickItem(value)}
                 />
                 {value}
               </Label>
@@ -35,7 +35,7 @@ export const CheckboxList: React.FC<CheckboxListProps> = (props) => {
               <Label>
                 <Checkbox
                   checked={checked}
-                  onClick={() => onClickItem(value)}
+                  onChange={() => onClickItem(value)}
                 />
                 {value}
               </Label>

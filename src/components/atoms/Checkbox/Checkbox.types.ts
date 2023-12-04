@@ -1,4 +1,4 @@
 export type CheckboxProps = {
   checked: boolean;
-  onClick: (value: boolean) => void;
+  onChange: (value: string) => void;
 } & React.InputHTMLAttributes<HTMLInputElement>;

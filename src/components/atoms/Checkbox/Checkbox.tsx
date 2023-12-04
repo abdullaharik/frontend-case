@@ -5,7 +5,18 @@ import type { CheckboxProps } from "./Checkbox.types";
 import "./Checkbox.scss";
 
 export const Checkbox: React.FC<CheckboxProps> = (props) => {
-  const { checked, onClick } = props;
+  const { checked, onChange, ...args } = props;
 
-  return <input type="checkbox" checked={checked} onClick={onClick} />;
+  const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    onChange(e.target.value);
+  };
+
+  return (
+    <input
+      type="checkbox"
+      checked={checked}
+      onChange={handleOnChange}
+      {...args}
+    />
+  );
 };
