@@ -3,7 +3,7 @@ import type { Item, MultipleSelectListProps } from "./MultipleSelectList.types";
 
 import "./MultipleSelectList.scss";
 
-import { Input, Button, Label, Header } from "../../atoms";
+import { Search, Button, Header } from "../../atoms";
 import {
   CheckboxList,
   CheckboxListItemType,
@@ -24,8 +24,9 @@ export const MultipleSelectList: React.FC<MultipleSelectListProps> = (
     setSelectableList(list.map(makeCheckboxListItem));
   }, [list]);
 
-  const filteredList = selectableList.filter(({ value }) =>
-    value.toLocaleLowerCase().includes(searchValue)
+  const filteredList = selectableList.filter(
+    ({ value, checked }) =>
+      value.toLocaleLowerCase().includes(searchValue) || checked
   );
 
   const handleSelect = (selected: Item) => {
@@ -48,9 +49,9 @@ export const MultipleSelectList: React.FC<MultipleSelectListProps> = (
   };
 
   return (
-    <div>
+    <div className="multiple-select-list">
       <Header tag="h3">{labels.title}</Header>
-      <Input
+      <Search
         value={searchValue}
         setValue={setSearchValue}
         placeholder={labels.placeholder}
