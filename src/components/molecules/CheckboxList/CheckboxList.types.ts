@@ -1,8 +1,8 @@
 export type CheckboxListItemValueType = string;
 
 export type CheckboxListItemType = {
-  value: CheckboxListItemValueType;
   checked: boolean;
+  value: CheckboxListItemValueType;
 };
 
 export type CheckboxListProps = {
