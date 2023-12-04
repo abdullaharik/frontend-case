@@ -1,0 +1,19 @@
+div.multiple-select-list {
+  width: 20rem;
+  padding: calc(var(--font-size) * 1.5);
+
+  max-height: 90vh;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--font-size);
+
+  background-color: #eee;
+  border-radius: var(--radius-2);
+  border: 1px solid #ccc;
+
+  & > * {
+    width: 100%;
+    margin: 0;
+  }
+}
