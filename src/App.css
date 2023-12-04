@@ -1,38 +1,43 @@
-.App {
-  text-align: center;
+:root {
+  --clr-bg: #fff;
+  --clr-bg-card: #f8f8f8;
+  --clr-primary: #3064d0;
+  --clr-border: #c4c3bf;
+  --clr-text: #4d4d4d;
+  --clr-scrollbar-track: #e8e6e7;
+  --clr-scrollbar-thumb: #c6c2bf;
+  --size-scrollbar: 8px;
+  --size-border: 1px;
+  --font-size: 1rem;
+  --radius-1: 0.25rem;
+  --radius-2: 0.5rem;
+  --radius-3: 1rem;
+  --radius-4: 2rem;
+  --radius-5: 4rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html,
+body,
+#root,
+.App,
+.App > div {
+  height: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+html {
+  font-size: var(--font-size);
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: var(--font-size);
+  margin: 0;
+  padding: 0;
+  display: grid;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  align-content: center;
 }
